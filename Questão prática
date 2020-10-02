@@ -1,0 +1,36 @@
+package provapublicatec;
+import java.util.Scanner;
+
+public class ProvaPublicaTec {
+    //Não sabia utilizar tabelas então fiz do jeito em que consegui.
+    public static void main(String[] args) {
+        Scanner in = new Scanner (System.in);
+        int placar;
+        int min=10;
+        int max=24;
+        int quebra_min=0;
+        int quebra_max=0;
+        int jogos=0;
+        
+        while(jogos<100){
+        System.out.print("Digite o placar do jogo: ");
+        placar=in.nextInt();
+        
+        if (placar<min){
+            min = placar;
+            quebra_min++;
+        }
+        if (placar>max){
+            max=placar;
+            quebra_max++;
+        }
+        jogos++;
+        System.out.println("Jogos: "+jogos);
+        System.out.println("Máximo: "+max);
+        System.out.println("Mínimo: "+ min);
+        System.out.println("Quebra de recorde mínimo: "+quebra_min);
+        System.out.println("Quebra de recorde máximo: "+quebra_max);
+            System.out.println();
+    }
+  }
+}
